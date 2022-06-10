@@ -1,0 +1,58 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach Local Debug",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "presentation": {
+                "hidden": false,
+                "group": "Attach Local Debug",
+                "order": 1
+            }
+        },
+        {
+            "name": "Launch Local Debug Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "presentation": {
+                "hidden": false,
+                "group": "Launch Local Debug",
+                "order": 2
+            }
+        },
+        {
+            "name": "Launch Local Debug Client",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "presentation": {
+                "hidden": false,
+                "group": "Launch Local Debug",
+                "order": 3
+            }
+        },
+        {
+            "name": "Launch Local Full Stack",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            // "console": "integratedTerminal",
+            "serverReadyAction": {
+                "pattern": "started server on .+, url: (https?://.+)",
+                "uriFormat": "%s",
+                "action": "debugWithChrome"
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "Launch Local Debug",
+                "order": 1
+            }
+        }
+    ]
+}

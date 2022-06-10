@@ -1,12 +1,35 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+	"name": "nextjs-docker",
+	"version": "0.1.0",
+	"description": "Docker image for scaffolding a Next.js application.",
+	"private": true,
+	"scripts": {
+		"lint": "next lint",
+		"dev": "NODE_OPTIONS='--inspect' next",
+		"build": "next build",
+		"docker-build": "docker build -t nextjs-docker .",
+		"docker-run": "docker run -p 3000:3000 nextjs-docker",
+		"start": "next start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ptklemm/nextjs-docker.git"
+	},
+	"author": "Phillip Klemm",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ptklemm/nextjs-docker/issues"
+	},
+	"homepage": "https://github.com/ptklemm/nextjs-docker#readme",
+	"dependencies": {
+		"next": "latest",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.41",
+		"@types/react": "^18.0.12",
+		"eslint": "8.17.0",
+		"eslint-config-next": "12.1.6"
+	}
 }
