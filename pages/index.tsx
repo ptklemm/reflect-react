@@ -1,12 +1,3 @@
-import Head from "next/head";
-
 export default function Home() {
-	return (
-		<div>
-			<Head>
-				<title>DB NAME</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-		</div>
-	);
+	return <p>Read me instructions go here.</p>;
 }

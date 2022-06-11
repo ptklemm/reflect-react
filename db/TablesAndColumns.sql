@@ -7,8 +7,8 @@ SELECT
 	c.data_type,
 	c.is_nullable,
 	c.column_default
-FROM information_schema.tables AS t
-LEFT JOIN information_schema.columns AS c ON c.table_name = t.table_name
+FROM information_schema.columns AS c
+LEFT JOIN information_schema.tables AS t ON c.table_name = t.table_name
 WHERE 
 	t.table_catalog = 'Adventureworks'
 	AND t.table_schema != 'pg_catalog'
