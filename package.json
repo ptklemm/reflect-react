@@ -1,26 +1,26 @@
 {
-	"name": "nextjs-docker",
+	"name": "reflect-react",
 	"version": "0.1.0",
-	"description": "Docker image for scaffolding a Next.js application.",
+	"description": "Dynamically builds React forms from a database schema.",
 	"private": true,
 	"scripts": {
 		"lint": "next lint",
 		"dev": "NODE_OPTIONS='--inspect' next",
 		"build": "next build",
-		"docker-build": "docker build -t nextjs-docker .",
-		"docker-run": "docker run -p 3000:3000 nextjs-docker",
+		"docker-build": "docker build -t reflect-react .",
+		"docker-run": "docker run --name client --network devnet -p 3000:3000 reflect-react",
 		"start": "next start"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ptklemm/nextjs-docker.git"
+		"url": "git+https://github.com/ptklemm/reflect-react.git"
 	},
 	"author": "Phillip Klemm",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/ptklemm/nextjs-docker/issues"
+		"url": "https://github.com/ptklemm/reflect-react/issues"
 	},
-	"homepage": "https://github.com/ptklemm/nextjs-docker#readme",
+	"homepage": "https://github.com/ptklemm/reflect-react#readme",
 	"dependencies": {
 		"next": "latest",
 		"react": "^17.0.2",
